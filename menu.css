@@ -12,3 +12,49 @@ header div:nth-child(1){
     left: 0;
     padding: 2%;
 }
+
+#nomresto{
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+}
+
+div{
+    margin: 2%;
+}
+
+em{
+    font-weight: bold;
+}
+
+section{
+    align-items: center;
+    border: solid 4 px black;
+    
+}
+
+fieldset{
+    border: none;
+}
+
+.choixentree{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    border: solid 1px red;
+}
+
+div{
+    border: solid 1px black;
+    
+    
+}
+
+p{
+    margin: 0;
+}
+
+input{
+    height: 25px;
+}
+
