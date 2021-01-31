@@ -1,0 +1,14 @@
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+
+
+header div:nth-child(1){
+    position: absolute;
+    left: 0;
+    padding: 2%;
+}
