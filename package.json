@@ -1,0 +1,19 @@
+{
+  "name": "",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/style.scss:./css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Thomas-Salin/Thomas-Salin_3_30012021.git"
+  },
+  "author": "Thomas Salin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Thomas-Salin/Thomas-Salin_3_30012021/issues"
+  },
+  "homepage": "https://github.com/Thomas-Salin/Thomas-Salin_3_30012021#readme"
+}
