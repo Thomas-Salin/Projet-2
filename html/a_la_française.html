@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="../css/style.css">
+        <script src="https://kit.fontawesome.com/329276ad25.js" crossorigin="anonymous"></script>
+        <title>Menu : À la française</title>
+    </head>
+
+    <body>
+
+        <header>
+            
+            <div>
+            <a href="../index.html"><i class="fas fa-arrow-left"></i></a>
+            </div>
+            <div>
+            <img src="../logo/ohmyfood.png" alt="logo_ohmyfood"/>
+            </div>
+
+        </header>
+        
+        <main>
+
+            <section id=identiteresto>
+
+                <img src="../photos/toa-heftiba-DQKerTsQwi0-unsplash.jp">
+
+                <div id=intituleresto>
+
+                    <div>
+                        <h1><em>À la française</em></h1>
+                    </div>
+                    <div>
+                    <i class="far fa-heart"></i>
+                    </div>
+
+                </div>
+                      
+            </section>
+        
+
+            <form method="post" action="traitement.php">
+
+                <fieldset>
+
+                    <legend>Entrées</legend>    
+
+                    <div class="choixentree"> 
+
+                        <div>
+                            <label for="tartare"><strong>Tartare de poulpe acidulé</strong><br/>Aux zestes d'orange</label>
+                        </div>
+                        <div>
+                            <p>25€</p>
+                        </div>
+                        <div>
+                            <i class="fas fa-check-circle"><input type="radio" name="entree" value="tartare" id="tartare"/></i>
+                        </div>
+
+                    </div>
+
+                    <div class="choixentree">
+
+                        <div>
+                            <label for="veloute"><strong>Velouté de légumes d'antan</strong><br/>Carotte, panais, topinambour</label>             
+                        </div>
+                        <div>
+                            <p>35€</p>
+                        </div>
+                        <div>
+                            <i class="fas fa-check-circle"><input type="radio" name="entree" value="veloute" id="veloute"/></i> 
+                        </div>
+
+                    </div>
+
+                    <div class="choixentree">
+
+                        <div>
+                            <label for="soupe"><strong>Soupe à l'oignon</strong><br/>Revisitée</label>                                  
+                        </div>
+                        <div>
+                            <p>20€</p>
+                        </div>
+                        <div>
+                            <i class="fas fa-check-circle"><input type="radio" name="entree" value="soupe" id="soupe"/></i>
+                        </div>
+
+                    </div>
+                      
+                 </fieldset>
+
+                 <fieldset>
+
+                    <legend>Plats</legend>
+
+                    <div class="choixplats">
+
+                        <div>
+                            <label for="coquilles"><strong>Coquilles Saint-Jacques</strong><br/>Accompagnées d'une purée de panais</label>                            
+                        </div>
+                        <div>
+                            <p>40€</p>
+                        </div>
+                        <div>
+                            <i class="fas fa-check-circle"><input type="radio" name="plats" value="coquilles" id="coquilles"/></i> 
+                        </div>
+                      
+                    </div>
+                    
+                    <div class="choixplats">
+
+                        <div>
+                            <label for="magret"><strong>Magret de canard</strong><br/>Et parmentier de pommes de terre</label>
+                        </div>
+                        <div>
+                            <p>35€</p>
+                        </div>
+                        <div>
+                            <i class="fas fa-check-circle"><input type="radio" name="plats" value="magret" id="magret"/></i> 
+                        </div>
+
+                    </div>
+
+                    <div class="choixplats">
+
+                        <div>
+                            <label for="pigeonneau"><strong>Pigeonneau d'Ille-et-Vilaine</strong><br/>Sur son lit de gnocchis aux légumes</label>
+                        </div>
+                        <div>
+                            <p>44€</p>
+                        </div>
+                        <div>
+                            <i class="fas fa-check-circle"><input type="radio" name="plats" value="pigeonneau" id="pigeonneau"/></i> 
+                        </div>
+
+                    </div>
+
+                 </fieldset>
+
+                 <fieldset>
+
+                    <legend>Desserts</legend>
+
+                    <div class="choixdessert">
+
+                        <div>
+                            <label for="petales"><strong>Pétales de violettes glacés</strong><br/>Et purée de noisettes</label>               
+                        </div>
+                        <div>
+                            <p>18€</p>
+                        </div>
+                        <div>
+                            <i class="fas fa-check-circle"><input type="radio" name="dessert" value="petales" id="petales"/></i> 
+                        </div>
+
+                    </div>
+
+                    <div class="choixdessert">
+
+                        <div>
+                            <label for="fondant"><strong>Fondant au chocolat</strong><br/>Revisité</label>
+                        </div>
+                        <div>
+                            <p>22€</p>
+                        </div>
+                        <div>
+                            <i class="fas fa-check-circle"><input type="radio" name="dessert" value="fondant" id="fondant"/></i> 
+                        </div>
+
+                    </div>
+
+                    <div class="choixdessert">
+
+                        <div>
+                            <label for="millefeuille"><strong>Millefeuille croustillant</strong><br/>Myrtilles et pâte d'amandes</label>
+                        </div>
+                        <div>
+                            <p>23€</p>
+                        </div>
+                        <div>
+                            <i class="fas fa-check-circle"><input type="radio" name="dessert" value="millefeuille" id="millefeuille"/></i> 
+                        </div>
+
+                    </div>
+
+                 </fieldset>
+                    
+                 <div>
+                     <input type="submit" value="Commander"/>
+                 </div>
+
+            </form>
+
+        </main>
+
+        <footer>
+
+            <img src="../logo/ohmyfood@2x.svg" alt="logosvg_ohmyfood"/>
+            <ul>
+                <li><i class="fas fa-utensils"></i>Proposer un restaurant</li>
+                <li><i class="fas fa-hands-helping"></i>Devenir partenaire</li>
+                <li>Mentions légales</li>
+                <li><a href="mailto:ohmyfood@gmail.com">Contact</a></li>
+            </ul>
+
+        </footer>
+
+    </body>
+</html>
