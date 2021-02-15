@@ -10,9 +10,15 @@
 
 $fonttitre: "Shrikhand";
 $fonttexte: "Roboto";
+$colorbackground: #f6f6f6; 
 
 body{
     margin: 0;
+}
+
+a{
+    text-decoration: none;
+    color: black;
 }
 
 .header{    
@@ -40,13 +46,12 @@ body{
     }
 
     &_intituleresto{
-        
         display: flex;
         position: absolute;
         bottom: 0;
         width: 92%;
-        background-color: #f6f6f6;
-        border-radius: 40px 40px 0px 0px;
+        background-color: $colorbackground;
+        border-radius: 70px 70px 0px 0px;
         align-items: center;
         font-family: $fonttitre;
         font-size: 4em;

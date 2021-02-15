@@ -10,6 +10,11 @@ body {
   margin: 0;
 }
 
+a {
+  text-decoration: none;
+  color: black;
+}
+
 .header {
   position: relative;
   text-align: center;
@@ -37,7 +42,7 @@ body {
   bottom: 0;
   width: 92%;
   background-color: #f6f6f6;
-  border-radius: 40px 40px 0px 0px;
+  border-radius: 70px 70px 0px 0px;
   align-items: center;
   font-family: "Shrikhand";
   font-size: 4em;
