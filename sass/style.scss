@@ -11,6 +11,10 @@
 $fonttitre: "Shrikhand";
 $fonttexte: "Roboto";
 $colorbackground: #f6f6f6; 
+$colorprimaire:#9356DC;
+$colorsecondaire:#FF79DA;
+$colortertiaire:#99E2D0;
+$paddingmain: 4%;
 
 body{
     margin: 0;
@@ -19,6 +23,10 @@ body{
 a{
     text-decoration: none;
     color: black;
+}
+
+p{
+    margin: 0;
 }
 
 .header{    
@@ -55,12 +63,43 @@ a{
         align-items: center;
         font-family: $fonttitre;
         font-size: 4em;
-        padding: 4%;
-        justify-content: space-between;
+        padding: $paddingmain;
+        justify-content: space-between;     
         
-        p{
-            margin: 0;
-        }
+    }
+}
+
+form{
+    background-color: $colorbackground;
+    font-family: $fonttexte;
+    padding: $paddingmain;
+
+}
+
+.fieldsetmenu{
+    border: none;  
+    padding-left: 0;
+    padding-right: 0;
+    font-size: 2.5em;
+
+    &_legend{
+        border-bottom: solid 6px $colortertiaire;
+        width: 75px; 
+        text-transform: uppercase;
+        font-weight: bold;
+        padding-bottom: 10px;
+        margin-bottom: 30px;
+        
+    }
+
+    &_flexbox{
+        display: flex;
+        background-color: #fff;
+        justify-content: space-between;
+        padding: $paddingmain;
+        align-items: flex-end;
+        border-radius: 40px;
+        margin-bottom: 30px;
     }
 }
 
