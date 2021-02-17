@@ -25,25 +25,40 @@ a{
     color: black;
 }
 
+h2{
+    margin: 0;
+}
+
 p{
     margin: 0;
 }
 
-.header{    
-    position: relative;
+header{    
     text-align: center;
-    margin: 4%;
+    margin: 4%;    
+}
 
+.headerbox{
+    display: flex;
+    text-align: start;
+    
     &_icone{
-        position: absolute;
-        margin-top: 1%;
-        padding-left: 1%;
+        align-self: center;
+        width: 25%;
+        font-size: 2em;
     }
 
-    i{
-        font-size: 3em;
+    &_logo{
+        width: 50%;
+
+        &_img{
+            object-fit: contain;
+            width: 100%;
+        }
     }
-} 
+}
+
+
 
 .menusection{
     position: relative;
@@ -61,8 +76,8 @@ p{
         background-color: $colorbackground;
         border-radius: 70px 70px 0px 0px;
         align-items: center;
+        font-size: 2em;
         font-family: $fonttitre;
-        font-size: 4em;
         padding: $paddingmain;
         justify-content: space-between;     
         
@@ -92,14 +107,38 @@ form{
         
     }
 
+    &_box{
+        padding-top: 2.5%;
+        padding-bottom: 2.5%;
+        padding-left: 4%;
+        padding-right: 4%;
+    }
+
+
+
     &_flexbox{
         display: flex;
         background-color: #fff;
         justify-content: space-between;
-        padding: $paddingmain;
         align-items: flex-end;
         border-radius: 40px;
         margin-bottom: 30px;
+
+        &_prix{
+            font-weight: bold;
+        }
+
+        &_anim{
+            padding: 4.65%;
+            border-radius: 0px 40px 40px 0px;
+            background-color: $colortertiaire;
+            color: #fff;
+        }
     }
+
 }
 
+
+input{
+    display: none;
+}

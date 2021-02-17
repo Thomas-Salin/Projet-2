@@ -15,22 +15,34 @@ a {
   color: black;
 }
 
+h2 {
+  margin: 0;
+}
+
 p {
   margin: 0;
 }
 
-.header {
-  position: relative;
+header {
   text-align: center;
   margin: 4%;
 }
-.header_icone {
-  position: absolute;
-  margin-top: 1%;
-  padding-left: 1%;
+
+.headerbox {
+  display: flex;
+  text-align: start;
 }
-.header i {
-  font-size: 3em;
+.headerbox_icone {
+  align-self: center;
+  width: 25%;
+  font-size: 2em;
+}
+.headerbox_logo {
+  width: 50%;
+}
+.headerbox_logo_img {
+  object-fit: contain;
+  width: 100%;
 }
 
 .menusection {
@@ -48,8 +60,8 @@ p {
   background-color: #f6f6f6;
   border-radius: 70px 70px 0px 0px;
   align-items: center;
+  font-size: 2em;
   font-family: "Shrikhand";
-  font-size: 4em;
   padding: 4%;
   justify-content: space-between;
 }
@@ -74,14 +86,32 @@ form {
   padding-bottom: 10px;
   margin-bottom: 30px;
 }
+.fieldsetmenu_box {
+  padding-top: 2.5%;
+  padding-bottom: 2.5%;
+  padding-left: 4%;
+  padding-right: 4%;
+}
 .fieldsetmenu_flexbox {
   display: flex;
   background-color: #fff;
   justify-content: space-between;
-  padding: 4%;
   align-items: flex-end;
   border-radius: 40px;
   margin-bottom: 30px;
+}
+.fieldsetmenu_flexbox_prix {
+  font-weight: bold;
+}
+.fieldsetmenu_flexbox_anim {
+  padding: 4.65%;
+  border-radius: 0px 40px 40px 0px;
+  background-color: #99E2D0;
+  color: #fff;
+}
+
+input {
+  display: none;
 }
 
 /*# sourceMappingURL=style.css.map */
