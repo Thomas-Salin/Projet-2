@@ -10,11 +10,22 @@
 
 $fonttitre: "Shrikhand";
 $fonttexte: "Roboto";
-$colorbackground: #f6f6f6; 
 $colorprimaire:#9356DC;
-$colorsecondaire:#FF79DA;
+$colorsecondaire:#ff79da;
+$huecolorsecondaire: 317; 
 $colortertiaire:#99E2D0;
-$paddingmain: 4%;
+$colorbackgroundmain: #f6f6f6;
+$colorbackgroundchoix:#fff;
+$colorbackgroundfooter: #000000; 
+$paddingmain: 2%;
+
+@function colorbouton($huecolorsecondaire){
+    $hue: $huecolorsecondaire;
+    $sat: 62.5%;
+    $light: 60%;
+    $colorbouton: hsl($hue,$sat,$light);
+    @return $colorbouton;
+}
 
 body{
     margin: 0;
@@ -27,10 +38,14 @@ a{
 
 h2{
     margin: 0;
+    font-size: 2.5em;
 }
 
 p{
-    margin: 0;
+    margin-top: 50px;
+    margin-bottom: 0;
+    margin-right: 0;
+    margin-left: 0;
 }
 
 header{    
@@ -73,72 +88,116 @@ header{
         position: absolute;
         bottom: 0;
         width: 92%;
-        background-color: $colorbackground;
+        background-color: $colorbackgroundmain;
         border-radius: 70px 70px 0px 0px;
         align-items: center;
         font-size: 2em;
         font-family: $fonttitre;
-        padding: $paddingmain;
+        padding: 4%;
         justify-content: space-between;     
         
     }
 }
 
 form{
-    background-color: $colorbackground;
+    background-color: $colorbackgroundmain;
     font-family: $fonttexte;
-    padding: $paddingmain;
-
-}
-
-.fieldsetmenu{
-    border: none;  
-    padding-left: 0;
-    padding-right: 0;
-    font-size: 2.5em;
-
-    &_legend{
-        border-bottom: solid 6px $colortertiaire;
-        width: 75px; 
-        text-transform: uppercase;
-        font-weight: bold;
-        padding-bottom: 10px;
-        margin-bottom: 30px;
-        
-    }
-
-    &_box{
-        padding-top: 2.5%;
-        padding-bottom: 2.5%;
-        padding-left: 4%;
-        padding-right: 4%;
-    }
+    padding: 4%;
 
 
+    .fieldsetmenu{
+        border: none;  
+        padding-left: 0;
+        padding-right: 0;
+        font-size: 2.5em;
 
-    &_flexbox{
-        display: flex;
-        background-color: #fff;
-        justify-content: space-between;
-        align-items: flex-end;
-        border-radius: 40px;
-        margin-bottom: 30px;
-
-        &_prix{
+        &_legend{
+            border-bottom: solid 6px $colortertiaire;
+            width: 75px; 
+            text-transform: uppercase;
             font-weight: bold;
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+        
         }
 
-        &_anim{
-            padding: 4.65%;
-            border-radius: 0px 40px 40px 0px;
-            background-color: $colortertiaire;
-            color: #fff;
+        &_box{
+            padding-top: 2.5%;
+            padding-bottom: 2.5%;
+            padding-left: 2%;
+            padding-right: 2%;
         }
+
+
+
+        &_flexbox{
+            display: flex;
+            background-color: $colorbackgroundchoix;
+            justify-content: space-between;
+            align-items: center;
+            border-radius: 40px;
+            margin-bottom: 30px;
+
+            &_prix{
+                font-weight: bold;
+            }
+
+            &_anim{
+                padding: 5.5%;
+                border-radius: 0px 40px 40px 0px;
+                background-color: $colortertiaire;
+                color: #fff;
+
+                input{
+                    display: none;
+                }
+            }
+        }
+
     }
 
+    .div{
+        text-align: center;
+
+        &_bouton{
+            padding: 2% 6%;            
+            font-size: 2.5em;
+            color: #fff;
+            background-color: colorbouton($huecolorsecondaire);
+            cursor: pointer;
+            border-radius: 40px;
+            box-shadow: 0px 0px 25px hsl(0, 0%, 50%);
+            border: none;
+        }   
+    }
 }
 
+footer{
+    background-color: #000000;
+    font-family: $fonttexte;
+    padding: 2%;
+    color: #fff;
+    
+    a{
+        color: #fff;
+    }
 
-input{
-    display: none;
+    i{
+        margin-right: 10px;
+    }
+
+    .fa-utensils{
+        padding-left: 2px;
+        padding-right: 4px;
+    }
+
+    ul{
+        padding: 0;
+    }
+
+    li{
+        list-style: none;
+        margin-bottom: 10px;
+    }
 }
+
