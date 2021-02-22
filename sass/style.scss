@@ -13,6 +13,7 @@ $fonttexte: "Roboto";
 $colorprimaire:#9356DC;
 $colorsecondaire:#ff79da;
 $colortertiaire:#99E2D0;
+$colorimgcadre: darken($colortertiaire,40%);
 $colorbackgroundmain: #f6f6f6;
 $colorbackgroundchamps: darken($colorbackgroundmain, 15%);
 $colorbackgroundchoix:#fff;
@@ -21,11 +22,11 @@ $paddingmain: 2%;
 
 
 @mixin dimension_accueil{
-        width: 96%;
+        width: 92%;
         padding-top: 50px;
         padding-bottom: 50px;
-        padding-right: 2%;
-        padding-left: 2%;
+        padding-right: 4%;
+        padding-left: 4%;
 }
 
 
@@ -40,30 +41,45 @@ a{
 
 h2{
     margin: 0;
-    font-size: 2.5em;
 }
 
 header{    
     text-align: center;
     margin: 4%;    
-}
 
-.headerbox{
-    display: flex;
-    text-align: start;
-    
-    &_icone{
-        align-self: center;
-        width: 25%;
-        font-size: 2em;
-    }
+    .header_accueil{
+        width: 92%;
 
-    &_logo{
-        width: 50%;
-
-        &_img{
-            object-fit: contain;
+        &_logo{
             width: 100%;
+            object-fit: contain;
+            border: solid 1px red;
+
+            &_img{
+                object-fit: contain;
+                width: 60%;
+            }
+        }
+
+    }
+    
+    .headerbox{
+        display: flex;
+        text-align: start;
+    
+        &_icone{
+            align-self: center;
+            width: 25%;
+            font-size: 2em;
+        }
+
+        &_logo{
+            width: 50%;
+
+            &_img{
+                object-fit: contain;
+                width: 100%;
+            }
         }
     }
 }
@@ -174,6 +190,7 @@ form{
             border: none;
             font-weight: bold;
             margin-top: 25px;
+            width: 225px;
         }   
     }
 }
@@ -181,7 +198,7 @@ form{
 footer{
     background-color: #000000;
     font-family: $fonttexte;
-    padding: 2%;
+    padding: 4%;
     color: #fff;
     
     a{
@@ -254,7 +271,10 @@ h1{
 
     ul{
         list-style: none;
-        padding: 25px;
+        padding-top: 25px;
+        padding-bottom: 25px;
+        padding-right: 2%;
+        padding-left: 2%;
         margin: 0;
         width: 96%;
 
@@ -264,7 +284,6 @@ h1{
             padding: 25px;
             border-radius: 25px;
             margin-bottom: 25px;
-            margin-right: 15px;
             font-weight: bold;
             
 
@@ -288,5 +307,65 @@ h1{
 
 }
 
+#restaurantgeneral{
+    @include dimension_accueil;
+    font-family: $fonttexte;
+    background-color: $colorbackgroundmain;
 
+    #boxarticle{
+        margin-top: 25px;
+        margin-bottom: 25px;
+    }
 
+    .carte_restaurant{
+        width: 100%;
+        border-radius: 20px;
+        margin-top: 25px;
+
+        .imgresto{
+            position: relative;
+        
+            &_photo{ 
+                object-fit: contain;
+                width: 100%;
+                border-radius: 20px 20px 0px 0px;
+            }
+        
+            &_encadre{
+                position: absolute;
+                right: 0;
+                top: 0;
+                color: $colorimgcadre;
+                background-color: $colortertiaire;
+                margin: 15px;
+                padding: 5px 15px;
+                border-radius: 5px;
+                font-weight: bold;
+            }
+        }
+
+        .intituleart{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 40px;
+            padding-bottom: 40px;
+            padding-right: 20px;
+            padding-left: 20px;
+            background-color: $colorbackgroundchoix;
+            border-radius: 0px 0px 20px 20px;
+
+            h3{
+                margin: 0;
+            }
+
+            p{
+                margin: 0;
+            }
+
+            i{
+                font-size: 2em;
+            }
+        }
+    }
+}

@@ -17,27 +17,37 @@ a {
 
 h2 {
   margin: 0;
-  font-size: 2.5em;
 }
 
 header {
   text-align: center;
   margin: 4%;
 }
-
-.headerbox {
+header .header_accueil {
+  width: 92%;
+}
+header .header_accueil_logo {
+  width: 100%;
+  object-fit: contain;
+  border: solid 1px red;
+}
+header .header_accueil_logo_img {
+  object-fit: contain;
+  width: 60%;
+}
+header .headerbox {
   display: flex;
   text-align: start;
 }
-.headerbox_icone {
+header .headerbox_icone {
   align-self: center;
   width: 25%;
   font-size: 2em;
 }
-.headerbox_logo {
+header .headerbox_logo {
   width: 50%;
 }
-.headerbox_logo_img {
+header .headerbox_logo_img {
   object-fit: contain;
   width: 100%;
 }
@@ -131,12 +141,13 @@ form .div .bouton {
   border: none;
   font-weight: bold;
   margin-top: 25px;
+  width: 225px;
 }
 
 footer {
   background-color: #000000;
   font-family: "Roboto";
-  padding: 2%;
+  padding: 4%;
   color: #fff;
 }
 footer a {
@@ -190,25 +201,28 @@ h1 {
   margin-left: 20px;
 }
 .form_accueil div {
-  width: 96%;
+  width: 92%;
   padding-top: 50px;
   padding-bottom: 50px;
-  padding-right: 2%;
-  padding-left: 2%;
+  padding-right: 4%;
+  padding-left: 4%;
   background-color: #f6f6f6;
 }
 
 #presentation {
-  width: 96%;
+  width: 92%;
   padding-top: 50px;
   padding-bottom: 50px;
-  padding-right: 2%;
-  padding-left: 2%;
+  padding-right: 4%;
+  padding-left: 4%;
   font-family: "Roboto";
 }
 #presentation ul {
   list-style: none;
-  padding: 25px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  padding-right: 2%;
+  padding-left: 2%;
   margin: 0;
   width: 96%;
 }
@@ -218,7 +232,6 @@ h1 {
   padding: 25px;
   border-radius: 25px;
   margin-bottom: 25px;
-  margin-right: 15px;
   font-weight: bold;
 }
 #presentation ul li strong {
@@ -233,6 +246,64 @@ h1 {
 }
 #presentation ul li i {
   margin-right: 15px;
+}
+
+#restaurantgeneral {
+  width: 92%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  padding-right: 4%;
+  padding-left: 4%;
+  font-family: "Roboto";
+  background-color: #f6f6f6;
+}
+#restaurantgeneral #boxarticle {
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+#restaurantgeneral .carte_restaurant {
+  width: 100%;
+  border-radius: 20px;
+  margin-top: 25px;
+}
+#restaurantgeneral .carte_restaurant .imgresto {
+  position: relative;
+}
+#restaurantgeneral .carte_restaurant .imgresto_photo {
+  object-fit: contain;
+  width: 100%;
+  border-radius: 20px 20px 0px 0px;
+}
+#restaurantgeneral .carte_restaurant .imgresto_encadre {
+  position: absolute;
+  right: 0;
+  top: 0;
+  color: #278870;
+  background-color: #99E2D0;
+  margin: 15px;
+  padding: 5px 15px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+#restaurantgeneral .carte_restaurant .intituleart {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  padding-right: 20px;
+  padding-left: 20px;
+  background-color: #fff;
+  border-radius: 0px 0px 20px 20px;
+}
+#restaurantgeneral .carte_restaurant .intituleart h3 {
+  margin: 0;
+}
+#restaurantgeneral .carte_restaurant .intituleart p {
+  margin: 0;
+}
+#restaurantgeneral .carte_restaurant .intituleart i {
+  font-size: 2em;
 }
 
 /*# sourceMappingURL=style.css.map */
