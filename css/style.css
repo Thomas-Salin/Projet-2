@@ -9,7 +9,19 @@
 body {
   margin: 0;
 }
+@media all and (min-width: 768px) {
+  body {
+    background-color: #e4d5f6;
+  }
+}
 
+@media all and (min-width: 768px) {
+  main {
+    width: 60%;
+    margin-left: 20%;
+    margin-right: 20%;
+  }
+}
 a {
   text-decoration: none;
   color: black;
@@ -29,27 +41,37 @@ header .header_accueil {
 header .header_accueil_logo {
   width: 100%;
   object-fit: contain;
-  border: solid 1px red;
 }
 header .header_accueil_logo_img {
   object-fit: contain;
   width: 60%;
 }
-header .headerbox {
+
+.headerbox {
   display: flex;
   text-align: start;
 }
-header .headerbox_icone {
+.headerbox_icone {
   align-self: center;
-  width: 25%;
   font-size: 2em;
 }
-header .headerbox_logo {
-  width: 50%;
+@media all and (max-width: 768px) {
+  .headerbox_icone {
+    font-size: 1em;
+  }
 }
-header .headerbox_logo_img {
-  object-fit: contain;
+.headerbox_logo {
   width: 100%;
+  text-align: center;
+}
+.headerbox_logo_img {
+  object-fit: contain;
+  width: 40%;
+}
+@media all and (max-width: 768px) {
+  .headerbox_logo_img {
+    width: 50%;
+  }
 }
 
 .menusection {
@@ -59,27 +81,47 @@ header .headerbox_logo_img {
   object-fit: contain;
   width: 100%;
 }
+@media all and (min-width: 768px) {
+  .menusection_image {
+    border-radius: 40px 40px 0px 0px;
+  }
+}
 .menusection_intituleresto {
   display: flex;
   position: absolute;
   bottom: 0;
-  width: 96%;
+  width: 92%;
+  padding-top: 6%;
+  padding-right: 4%;
+  padding-left: 4%;
   background-color: #f6f6f6;
-  border-radius: 70px 70px 0px 0px;
+  border-radius: 40px 40px 0px 0px;
   align-items: center;
-  font-size: 2em;
   font-family: "Shrikhand";
-  padding: 2%;
-  justify-content: space-between;
+  font-size: 1.5em;
+}
+@media all and (max-width: 500px) {
+  .menusection_intituleresto {
+    font-size: 1em;
+  }
+}
+.menusection_intituleresto_titre {
+  width: 95%;
 }
 
 form {
   background-color: #f6f6f6;
   font-family: "Roboto";
+  width: 92%;
   padding-top: 50px;
   padding-bottom: 50px;
-  padding-right: 2%;
-  padding-left: 2%;
+  padding-right: 4%;
+  padding-left: 4%;
+}
+@media all and (min-width: 768px) {
+  form {
+    border-radius: 0px 0px 40px 40px;
+  }
 }
 form .accueil {
   text-align: center;
@@ -88,10 +130,10 @@ form .fieldsetmenu {
   border: none;
   padding-left: 0;
   padding-right: 0;
-  font-size: 2.5em;
+  font-size: 1em;
 }
 form .fieldsetmenu_legend {
-  border-bottom: solid 6px #99E2D0;
+  border-bottom: solid 4px #99E2D0;
   width: 75px;
   text-transform: uppercase;
   font-weight: bold;
@@ -134,14 +176,19 @@ form .div {
 form .div .bouton {
   padding: 15px 30px;
   color: #fff;
-  background-color: #9356DC;
+  background-color: #d20098;
   cursor: pointer;
   border-radius: 40px;
-  box-shadow: 0px 0px 10px gray;
   border: none;
   font-weight: bold;
   margin-top: 25px;
   width: 225px;
+  box-shadow: 0px 0px 10px #bfbfbf;
+  transition: all 400ms;
+}
+form .div .bouton:hover {
+  opacity: 80%;
+  box-shadow: 0px 0px 10px #4d4d4d;
 }
 
 footer {
@@ -187,18 +234,19 @@ h1 {
 }
 .form_accueil #champ_de_recherche {
   width: 96%;
-  padding-top: 25px;
-  padding-bottom: 25px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   padding-right: 2%;
   padding-left: 2%;
   background-color: #d0d0d0;
 }
 .form_accueil #champ_de_recherche input {
   background-color: #d0d0d0;
+  font-size: 1em;
 }
 .form_accueil #champ_de_recherche i {
-  margin-right: 20px;
-  margin-left: 20px;
+  margin-right: 10px;
+  margin-left: 50px;
 }
 .form_accueil div {
   width: 92%;
@@ -228,24 +276,34 @@ h1 {
 }
 #presentation ul li {
   display: block;
-  background-color: #f6f6f6;
   padding: 25px;
   border-radius: 25px;
   margin-bottom: 25px;
   font-weight: bold;
+  box-shadow: 0px 0px 10px #bfbfbf;
 }
 #presentation ul li strong {
   border-radius: 50%;
   padding-left: 5px;
   padding-right: 5px;
-  background-color: #ff79da;
+  background-color: #9356DC;
   color: #fff;
   margin-right: 15px;
-  margin-left: -35px;
+  margin-left: -32px;
   font-weight: normal;
 }
 #presentation ul li i {
   margin-right: 15px;
+}
+#presentation ul .li_color {
+  background-color: #f6f6f6;
+}
+#presentation ul .li_othercolor {
+  background-color: #e4d5f6;
+}
+
+.othercolor {
+  background-color: #9356DC;
 }
 
 #restaurantgeneral {
@@ -265,6 +323,7 @@ h1 {
   width: 100%;
   border-radius: 20px;
   margin-top: 25px;
+  box-shadow: 0px 0px 10px #bfbfbf;
 }
 #restaurantgeneral .carte_restaurant .imgresto {
   position: relative;
@@ -289,8 +348,8 @@ h1 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 40px;
-  padding-bottom: 40px;
+  padding-top: 30px;
+  padding-bottom: 30px;
   padding-right: 20px;
   padding-left: 20px;
   background-color: #fff;

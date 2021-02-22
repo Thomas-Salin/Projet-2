@@ -14,6 +14,7 @@ $colorprimaire:#9356DC;
 $colorsecondaire:#ff79da;
 $colortertiaire:#99E2D0;
 $colorimgcadre: darken($colortertiaire,40%);
+$colorbouton: darken($colorsecondaire, 32.5%);
 $colorbackgroundmain: #f6f6f6;
 $colorbackgroundchamps: darken($colorbackgroundmain, 15%);
 $colorbackgroundchoix:#fff;
@@ -29,9 +30,26 @@ $paddingmain: 2%;
         padding-left: 4%;
 }
 
+@mixin box-shadow{
+    box-shadow: 0px 0px 10px hsl(0, 0%, 75%);
+}
+
+
+
 
 body{
     margin: 0;
+    @media all and (min-width: 768px){
+        background-color: lighten($colorprimaire, 30%);
+    }    
+}
+
+@media all and (min-width: 768px){
+    main{
+        width: 60%;
+        margin-left: 20%;
+        margin-right: 20%;
+    }
 }
 
 a{
@@ -53,7 +71,6 @@ header{
         &_logo{
             width: 100%;
             object-fit: contain;
-            border: solid 1px red;
 
             &_img{
                 object-fit: contain;
@@ -62,26 +79,32 @@ header{
         }
 
     }
+}    
     
-    .headerbox{
+.headerbox{
         display: flex;
         text-align: start;
     
         &_icone{
             align-self: center;
-            width: 25%;
             font-size: 2em;
+            @media all and (max-width: 768px){
+                font-size: 1em;
+            }
         }
 
         &_logo{
-            width: 50%;
+            width: 100%;
+            text-align: center;
 
             &_img{
                 object-fit: contain;
-                width: 100%;
+                width: 40%;
+                @media all and (max-width: 768px){
+                    width: 50%;
+                }
             }
         }
-    }
 }
 
 
@@ -92,20 +115,31 @@ header{
     &_image{
         object-fit: contain;
         width: 100%;
+        @media all and (min-width: 768px){
+            border-radius: 40px 40px 0px 0px;
+        }    
     }
 
     &_intituleresto{
         display: flex;
         position: absolute;
         bottom: 0;
-        width: 96%;
+        width: 92%;
+        padding-top: 6%;
+        padding-right: 4%;
+        padding-left: 4%;
         background-color: $colorbackgroundmain;
-        border-radius: 70px 70px 0px 0px;
+        border-radius: 40px 40px 0px 0px;
         align-items: center;
-        font-size: 2em;
         font-family: $fonttitre;
-        padding: 2%;
-        justify-content: space-between;     
+        font-size: 1.5em;
+        @media all and (max-width: 500px){
+            font-size: 1em;
+        } 
+        
+        &_titre{
+            width: 95%;
+        }
         
     }
 }
@@ -113,10 +147,10 @@ header{
 form{
     background-color: $colorbackgroundmain;
     font-family: $fonttexte;
-    padding-top: 50px;
-    padding-bottom: 50px;
-    padding-right: 2%;
-    padding-left: 2%;
+    @include dimension_accueil;
+    @media all and (min-width: 768px){
+        border-radius: 0px 0px 40px 40px;
+    }    
 
     .accueil{
         text-align: center;
@@ -126,10 +160,10 @@ form{
         border: none;  
         padding-left: 0;
         padding-right: 0;
-        font-size: 2.5em;
+        font-size: 1em;
 
         &_legend{
-            border-bottom: solid 6px $colortertiaire;
+            border-bottom: solid 4px $colortertiaire;
             width: 75px; 
             text-transform: uppercase;
             font-weight: bold;
@@ -183,14 +217,19 @@ form{
         .bouton{
             padding: 15px 30px;                        
             color: #fff;
-            background-color: $colorprimaire;
+            background-color: $colorbouton;
             cursor: pointer;
-            border-radius: 40px;
-            box-shadow: 0px 0px 10px hsl(0, 0%, 50%);
+            border-radius: 40px;   
             border: none;
             font-weight: bold;
             margin-top: 25px;
             width: 225px;
+            @include box-shadow;
+            transition: all 400ms;
+            &:hover{
+                opacity: 80%;
+                box-shadow: 0px 0px 10px hsl(0, 0%, 30%);
+            }
         }   
     }
 }
@@ -243,19 +282,20 @@ h1{
 
     #champ_de_recherche{
         width: 96%;
-        padding-top: 25px;
-        padding-bottom: 25px;
+        padding-top: 20px;
+        padding-bottom: 20px;
         padding-right: 2%;
         padding-left: 2%;
         background-color: $colorbackgroundchamps;
 
         input{
             background-color: $colorbackgroundchamps;
+            font-size: 1em;
         }
 
         i{
-            margin-right: 20px;
-            margin-left: 20px;
+            margin-right: 10px;
+            margin-left: 50px;
         }
     }
 
@@ -280,21 +320,21 @@ h1{
 
         li{
             display: block;
-            background-color: $colorbackgroundmain;
             padding: 25px;
             border-radius: 25px;
             margin-bottom: 25px;
             font-weight: bold;
+            @include box-shadow;
             
 
             strong{
                 border-radius: 50%;
                 padding-left: 5px;
                 padding-right: 5px;
-                background-color: $colorsecondaire;
+                background-color: $colorprimaire;
                 color: #fff;
                 margin-right: 15px;
-                margin-left: -35px;
+                margin-left: -32px;
                 font-weight: normal;
             }
 
@@ -302,9 +342,20 @@ h1{
                 margin-right: 15px;
             }
         }
-    }
-    
+            
+        .li_color{
+                background-color: $colorbackgroundmain;
+        }
 
+        .li_othercolor{
+            background-color: lighten($colorprimaire, 30%);
+        }
+    }
+}
+
+
+.othercolor{
+    background-color: $colorprimaire;
 }
 
 #restaurantgeneral{
@@ -321,6 +372,7 @@ h1{
         width: 100%;
         border-radius: 20px;
         margin-top: 25px;
+        @include box-shadow;
 
         .imgresto{
             position: relative;
@@ -348,8 +400,8 @@ h1{
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding-top: 40px;
-            padding-bottom: 40px;
+            padding-top: 30px;
+            padding-bottom: 30px;
             padding-right: 20px;
             padding-left: 20px;
             background-color: $colorbackgroundchoix;
