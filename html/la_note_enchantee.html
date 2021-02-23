@@ -9,7 +9,7 @@
         <title>Menu : La note enchantée</title>
     </head>
 
-    <body>
+    <body id="body_carte">
 
         <header class="headerbox">
             
@@ -22,7 +22,7 @@
 
         </header>
         
-        <main>
+        <main id="main_carte">
 
             <section class="menusection">
 
@@ -50,26 +50,30 @@
 
                     <div class="fieldsetmenu_flexbox"> 
 
-                        <div class="fieldsetmenu_box">
+                        <div class="fieldsetmenu_box1">
                             <label for="ravioles"><strong>Ravioles de foie gras</strong><br/>Accompagnés de leur crème à la truffe</label>
                         </div>
-                        <div class="fieldsetmenu_box">
+                        <div class="fieldsetmenu_box2">
                             <p class="fieldsetmenu_flexbox_prix">25€</p>
                         </div>
                         <div class="fieldsetmenu_flexbox_anim">
-                            <i class="fas fa-check-circle"><input type="radio" name="entree" value="ravioles" id="ravioles"/></i>
+                            <i class="fas fa-check-circle"><input type="radio" name="entree" value="caviar" id="caviar"/></i> 
                         </div>
-
+          
                     </div>
+                    
 
                     <div class="fieldsetmenu_flexbox">
 
-                        <div class="fieldsetmenu_box">
-                            <label for="caviar"><strong>Caviar osciètre</strong><br/>Sur blini à la farine de blé noir</label>             
+                        <div class="flexbox">
+                            <div class="fieldsetmenu_box1">
+                                <label for="caviar"><strong>Caviar osciètre</strong><br/>Sur blini à la farine de blé noir</label>             
+                            </div>
+                            <div class="fieldsetmenu_box2">
+                                <p class="fieldsetmenu_flexbox_prix">35€</p>
+                            </div>
                         </div>
-                        <div class="fieldsetmenu_box">
-                            <p class="fieldsetmenu_flexbox_prix">35€</p>
-                        </div>
+                        
                         <div class="fieldsetmenu_flexbox_anim">
                             <i class="fas fa-check-circle"><input type="radio" name="entree" value="caviar" id="caviar"/></i> 
                         </div>
@@ -78,10 +82,10 @@
 
                     <div class="fieldsetmenu_flexbox">
 
-                        <div class="fieldsetmenu_box">
+                        <div class="fieldsetmenu_box1">
                             <label for="homard"><strong>Homard et espuma de potiron</strong><br/>Mariné aux zestes d'orange</label>                                  
                         </div>
-                        <div class="fieldsetmenu_box">
+                        <div class="fieldsetmenu_box2">
                             <p class="fieldsetmenu_flexbox_prix">20€</p>
                         </div>
                         <div class="fieldsetmenu_flexbox_anim">
@@ -92,10 +96,10 @@
 
                     <div class="fieldsetmenu_flexbox">
 
-                        <div class="fieldsetmenu_box">
+                        <div class="fieldsetmenu_box1">
                             <label for="foie_gras"><strong>Foie gras de canard cuit entier</strong><br/>Confiture de figues et pain toasté</label>
                         </div>
-                        <div class="fieldsetmenu_box">
+                        <div class="fieldsetmenu_box2">
                             <p class="fieldsetmenu_flexbox_prix">35€</p>
                         </div>
                         <div class="fieldsetmenu_flexbox_anim">
@@ -112,10 +116,10 @@
 
                     <div class="fieldsetmenu_flexbox">
 
-                        <div class="fieldsetmenu_box">
+                        <div class="fieldsetmenu_box1">
                             <label for="noix"><strong>Noix de coquilles Saint-Jacques</strong><br/>Sur lit de purée de céleri-rave</label>                            
                         </div>
-                        <div class="fieldsetmenu_box">
+                        <div class="fieldsetmenu_box2">
                             <p class="fieldsetmenu_flexbox_prix">40€</p>
                         </div>
                         <div class="fieldsetmenu_flexbox_anim">
@@ -126,10 +130,10 @@
                     
                     <div class="fieldsetmenu_flexbox">
 
-                        <div class="fieldsetmenu_box">
+                        <div class="fieldsetmenu_box1">
                             <label for="langoustine"><strong>Langoustine poêlée</strong><br/>Purée de patate douce</label>
                         </div>
-                        <div class="fieldsetmenu_box">
+                        <div class="fieldsetmenu_box2">
                             <p class="fieldsetmenu_flexbox_prix">35€</p>
                         </div>
                         <div class="fieldsetmenu_flexbox_anim">
@@ -140,10 +144,10 @@
 
                     <div class="fieldsetmenu_flexbox">
 
-                        <div class="fieldsetmenu_box">
+                        <div class="fieldsetmenu_box1">
                             <label for="mijote"><strong>Mijoté de queue de boeuf</strong><br/>Et riz sauvage aux zestes de citron</label>
                         </div>
-                        <div class="fieldsetmenu_box">
+                        <div class="fieldsetmenu_box2">
                             <p class="fieldsetmenu_flexbox_prix">44€</p>
                         </div>
                         <div class="fieldsetmenu_flexbox_anim">
@@ -160,10 +164,10 @@
 
                     <div class="fieldsetmenu_flexbox">
 
-                        <div class="fieldsetmenu_box">
+                        <div class="fieldsetmenu_box1">
                             <label for="macaron"><strong>Macaron noisette et chocolat</strong><br/>Glace au caramel brun et sel de Guérande</label>               
                         </div>
-                        <div class="fieldsetmenu_box">
+                        <div class="fieldsetmenu_box2">
                             <p class="fieldsetmenu_flexbox_prix">18€</p>
                         </div>
                         <div class="fieldsetmenu_flexbox_anim">
@@ -174,10 +178,10 @@
 
                     <div class="fieldsetmenu_flexbox">
 
-                        <div class="fieldsetmenu_box">
+                        <div class="fieldsetmenu_box1">
                             <label for="baba"><strong>Baba au rhum revisité</strong><br/>Avec son coulis de citron</label>
                         </div>
-                        <div class="fieldsetmenu_box">
+                        <div class="fieldsetmenu_box2">
                             <p class="fieldsetmenu_flexbox_prix">22€</p>
                         </div>
                         <div class="fieldsetmenu_flexbox_anim">
@@ -188,10 +192,10 @@
 
                     <div class="fieldsetmenu_flexbox">
 
-                        <div class="fieldsetmenu_box">
+                        <div class="fieldsetmenu_box1">
                             <label for="tarte"><strong>Tarte au citron meringuée</strong><br/>Destructurée</label>
                         </div>
-                        <div class="fieldsetmenu_box">
+                        <div class="fieldsetmenu_box2">
                             <p class="fieldsetmenu_flexbox_prix">23€</p>
                         </div>
                         <div class="fieldsetmenu_flexbox_anim">

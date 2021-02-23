@@ -39,13 +39,18 @@ $paddingmain: 2%;
 
 body{
     margin: 0;
-    @media all and (min-width: 768px){
-        background-color: lighten($colorprimaire, 30%);
-    }    
+    border: solid 1px black;
+      
 }
 
 @media all and (min-width: 768px){
-    main{
+    #body_carte{
+    background-color: lighten($colorprimaire, 30%);
+    }
+}
+
+@media all and (min-width: 768px){
+    #main_carte{
         width: 60%;
         margin-left: 20%;
         margin-right: 20%;
@@ -150,10 +155,19 @@ form{
     @include dimension_accueil;
     @media all and (min-width: 768px){
         border-radius: 0px 0px 40px 40px;
-    }    
+    } 
 
     .accueil{
         text-align: center;
+    }
+
+    .flexbox{
+        display: flex;
+        width: 100%;
+        border-radius: 25px;
+        &:hover + .fieldsetmenu_flexbox_anim{
+            transform: scaleX(1);
+        }
     }
 
     .fieldsetmenu{
@@ -163,20 +177,31 @@ form{
         font-size: 1em;
 
         &_legend{
-            border-bottom: solid 4px $colortertiaire;
-            width: 75px; 
+            border-bottom: solid 3px $colortertiaire;
+            width: 25px; 
             text-transform: uppercase;
             font-weight: bold;
-            padding-bottom: 10px;
+            padding-bottom: 5px;
+            padding-left: 0;
             margin-bottom: 30px;
         
         }
 
-        &_box{
-            padding-top: 2.5%;
-            padding-bottom: 2.5%;
-            padding-left: 2%;
-            padding-right: 2%;
+        &_box1{
+            padding-top: 25px;
+            padding-bottom: 25px;
+            padding-right: 5%;
+            padding-left: 5%;
+            white-space: nowrap;
+            overflow: hidden;
+            width: 100%;
+        }
+
+        &_box2{
+            padding-top: 25px;
+            padding-bottom: 25px;
+            padding-right: 5%;
+            padding-left: 5%;
         }
 
 
@@ -184,24 +209,33 @@ form{
         &_flexbox{
             display: flex;
             background-color: $colorbackgroundchoix;
-            justify-content: space-between;
             align-items: center;
-            border-radius: 40px;
+            border-radius: 25px;
             margin-bottom: 30px;
+
+
 
             &_prix{
                 font-weight: bold;
-                margin-top: 50px;
                 margin-bottom: 0;
                 margin-right: 0;
                 margin-left: 0;
             }
 
             &_anim{
-                padding: 5.5%;
-                border-radius: 0px 40px 40px 0px;
+                padding-left: 10%;
+                padding-right: 10%;
+                padding-top: 40px;
+                padding-bottom: 40px;
+                border-radius: 0px 25px 25px 0px;
                 background-color: $colortertiaire;
                 color: #fff;
+                transform-origin: 100%;
+                transform: scaleX(0);               
+                transition: transform 1s;
+                
+                
+                
 
                 input{
                     display: none;
@@ -279,6 +313,7 @@ h1{
 
 .form_accueil{
     padding: 0;
+    width: 100%;
 
     #champ_de_recherche{
         width: 96%;
