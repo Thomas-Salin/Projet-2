@@ -129,24 +129,28 @@ form {
     border-radius: 0px 0px 40px 40px;
   }
 }
+form label {
+  cursor: pointer;
+}
 form .accueil {
   text-align: center;
 }
-form .flexbox {
+form .flexbox_intitulechoix {
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
+  cursor: pointer;
   padding-top: 15px;
   padding-bottom: 15px;
   border-radius: 25px;
 }
-form .flexbox:hover + .fieldsetmenu_flexbox_anim {
-  transition: width 800ms ease-in-out, opacity 100ms 100ms;
+form .flexbox_intitulechoix:hover + .fieldsetmenu_flexbox_anim {
+  transition: width 800ms ease-in-out, opacity 100ms 150ms;
   width: 20%;
   opacity: 1;
 }
-form .flexbox:hover + .fieldsetmenu_flexbox_anim i {
+form .flexbox_intitulechoix:hover + .fieldsetmenu_flexbox_anim i {
   transform: rotate(1turn);
   transition: transform 700ms ease-in-out 100ms;
 }
@@ -168,19 +172,28 @@ form .fieldsetmenu_legend {
 form .fieldsetmenu_box1 {
   white-space: nowrap;
   overflow: hidden;
-  padding-left: 4%;
+  padding-left: 2%;
 }
 form .fieldsetmenu_box2 {
-  padding-left: 2%;
-  padding-right: 4%;
+  padding-left: 4%;
+  padding-right: 2%;
 }
 form .fieldsetmenu_flexbox {
   display: flex;
+  cursor: pointer;
   justify-content: space-between;
   background-color: #fff;
   align-items: center;
-  border-radius: 25px;
+  border-radius: 20px;
   margin-bottom: 30px;
+  box-shadow: 0px 0px 10px #cccccc;
+  transform-origin: 50%, 0%;
+  transform: translateY(0);
+  transition: transform;
+}
+form .fieldsetmenu_flexbox:hover {
+  box-shadow: 0px 0px 10px #4d4d4d;
+  text-decoration: none;
 }
 form .fieldsetmenu_flexbox_prix {
   font-weight: bold;
@@ -194,18 +207,90 @@ form .fieldsetmenu_flexbox_anim {
   margin-left: 2%;
   padding-top: 30px;
   padding-bottom: 30px;
-  border-radius: 0px 25px 25px 0px;
+  border-radius: 0px 20px 20px 0px;
   background-color: #99E2D0;
   color: #fff;
   opacity: 0;
   width: 0%;
-  transition: width 600ms, opacity 100ms 100ms;
+  transition: width 600ms;
 }
 form .fieldsetmenu_flexbox_anim i {
   transform: rotate(0turn);
 }
 form .fieldsetmenu_flexbox_anim input {
   display: none;
+}
+form .choix1 {
+  animation-name: apparition_progressive1;
+  animation-duration: 750ms;
+  animation-timing-function: ease-in-out;
+  animation-delay: 50ms;
+  animation-fill-mode: backwards;
+  transform-origin: 50% 0%;
+}
+@keyframes apparition_progressive1 {
+  0% {
+    transform: scaleY(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+}
+form .choix2 {
+  animation-name: apparition_progressive1;
+  animation-duration: 750ms;
+  animation-timing-function: ease-in-out;
+  animation-delay: 100ms;
+  animation-fill-mode: backwards;
+  transform-origin: 50% 0%;
+}
+@keyframes apparition_progressive1 {
+  0% {
+    transform: scaleY(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+}
+form .choix3 {
+  animation-name: apparition_progressive1;
+  animation-duration: 750ms;
+  animation-timing-function: ease-in-out;
+  animation-delay: 200ms;
+  animation-fill-mode: backwards;
+  transform-origin: 50% 0%;
+}
+@keyframes apparition_progressive1 {
+  0% {
+    transform: scaleY(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+}
+form .choix4 {
+  animation-name: apparition_progressive1;
+  animation-duration: 750ms;
+  animation-timing-function: ease-in-out;
+  animation-delay: 300ms;
+  animation-fill-mode: backwards;
+  transform-origin: 50% 0%;
+}
+@keyframes apparition_progressive1 {
+  0% {
+    transform: scaleY(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scaleY(1);
+    opacity: 1;
+  }
 }
 form .div {
   text-align: center;
@@ -220,7 +305,7 @@ form .div .bouton {
   font-weight: bold;
   margin-top: 25px;
   width: 225px;
-  box-shadow: 0px 0px 10px #bfbfbf;
+  box-shadow: 0px 0px 10px #cccccc;
   transition: all 400ms;
 }
 form .div .bouton:hover {
@@ -233,6 +318,17 @@ footer {
   font-family: "Roboto";
   padding: 4%;
   color: #fff;
+}
+@media all and (max-width: 500px) {
+  footer {
+    font-size: 0.85em;
+  }
+}
+@media all and (min-width: 768px) {
+  footer {
+    text-align: center;
+    padding: 2%;
+  }
 }
 footer a {
   color: #fff;
@@ -247,9 +343,22 @@ footer .fa-utensils {
 footer ul {
   padding: 0;
 }
+@media all and (min-width: 768px) {
+  footer ul {
+    display: flex;
+    justify-content: space-around;
+    padding: 2%;
+    margin: 0;
+  }
+}
 footer li {
   list-style: none;
   margin-bottom: 10px;
+}
+@media all and (min-width: 768px) {
+  footer li {
+    margin: 0;
+  }
 }
 
 /*Debut css "index.html"*/
@@ -318,7 +427,7 @@ h1 {
   border-radius: 25px;
   margin-bottom: 25px;
   font-weight: bold;
-  box-shadow: 0px 0px 10px #bfbfbf;
+  box-shadow: 0px 0px 10px #cccccc;
 }
 #presentation ul li strong {
   border-radius: 50%;
@@ -361,7 +470,7 @@ h1 {
   width: 100%;
   border-radius: 20px;
   margin-top: 25px;
-  box-shadow: 0px 0px 10px #bfbfbf;
+  box-shadow: 0px 0px 10px #cccccc;
 }
 #restaurantgeneral .carte_restaurant .imgresto {
   position: relative;
