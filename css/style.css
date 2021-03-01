@@ -27,9 +27,20 @@ a {
   text-decoration: none;
   color: black;
 }
+@media all and (min-width: 768px) {
+  a {
+    width: 22%;
+  }
+}
 
 h2 {
   margin: 0;
+}
+@media all and (min-width: 768px) {
+  h2 {
+    text-align: center;
+    margin: auto;
+  }
 }
 
 header {
@@ -45,7 +56,12 @@ header .header_accueil_logo {
 }
 header .header_accueil_logo_img {
   object-fit: contain;
-  width: 60%;
+  width: 50%;
+}
+@media all and (min-width: 768px) {
+  header .header_accueil_logo_img {
+    width: 40%;
+  }
 }
 
 .headerbox {
@@ -107,7 +123,7 @@ header .header_accueil_logo_img {
   }
 }
 .menusection_intituleresto_titre {
-  width: 95%;
+  width: 92%;
 }
 
 form {
@@ -127,6 +143,11 @@ form {
 @media all and (min-width: 768px) {
   form {
     border-radius: 0px 0px 40px 40px;
+    width: 92%;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    padding-right: 4%;
+    padding-left: 4%;
   }
 }
 form label {
@@ -172,6 +193,7 @@ form .fieldsetmenu_legend {
 form .fieldsetmenu_box1 {
   white-space: nowrap;
   overflow: hidden;
+  text-overflow: ellipsis;
   padding-left: 2%;
 }
 form .fieldsetmenu_box2 {
@@ -391,6 +413,9 @@ h1 {
   background-color: #d0d0d0;
   font-size: 1em;
 }
+.form_accueil #champ_de_recherche input:focus {
+  outline: none;
+}
 .form_accueil #champ_de_recherche i {
   margin-right: 10px;
   margin-left: 50px;
@@ -412,14 +437,28 @@ h1 {
   padding-left: 4%;
   font-family: "Roboto";
 }
+@media all and (min-width: 768px) {
+  #presentation {
+    width: 92%;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    padding-right: 4%;
+    padding-left: 4%;
+  }
+}
 #presentation ul {
   list-style: none;
   padding-top: 25px;
   padding-bottom: 25px;
   padding-right: 2%;
   padding-left: 2%;
-  margin: 0;
   width: 96%;
+}
+@media all and (min-width: 768px) {
+  #presentation ul {
+    display: flex;
+    justify-content: space-around;
+  }
 }
 #presentation ul li {
   display: block;
@@ -427,7 +466,18 @@ h1 {
   border-radius: 25px;
   margin-bottom: 25px;
   font-weight: bold;
+  background-color: #f6f6f6;
   box-shadow: 0px 0px 10px #cccccc;
+}
+@media all and (min-width: 768px) {
+  #presentation ul li {
+    margin-bottom: 0;
+    width: 20%;
+  }
+}
+#presentation ul li:hover {
+  background-color: #e4d5f6;
+  box-shadow: 0px 0px 10px #4d4d4d;
 }
 #presentation ul li strong {
   border-radius: 50%;
@@ -445,10 +495,6 @@ h1 {
 #presentation ul .li_color {
   background-color: #f6f6f6;
 }
-#presentation ul .li_othercolor {
-  background-color: #e4d5f6;
-}
-
 .othercolor {
   background-color: #9356DC;
 }
@@ -462,9 +508,24 @@ h1 {
   font-family: "Roboto";
   background-color: #f6f6f6;
 }
+@media all and (min-width: 768px) {
+  #restaurantgeneral {
+    width: 92%;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    padding-right: 4%;
+    padding-left: 4%;
+  }
+}
 #restaurantgeneral #boxarticle {
   margin-top: 25px;
   margin-bottom: 25px;
+}
+@media all and (min-width: 768px) {
+  #restaurantgeneral #boxarticle {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 #restaurantgeneral .carte_restaurant {
   width: 100%;
@@ -475,10 +536,21 @@ h1 {
 #restaurantgeneral .carte_restaurant .imgresto {
   position: relative;
 }
+@media all and (min-width: 768px) {
+  #restaurantgeneral .carte_restaurant .imgresto {
+    height: 250px;
+  }
+}
 #restaurantgeneral .carte_restaurant .imgresto_photo {
   object-fit: contain;
   width: 100%;
   border-radius: 20px 20px 0px 0px;
+}
+@media all and (min-width: 768px) {
+  #restaurantgeneral .carte_restaurant .imgresto_photo {
+    height: 250px;
+    object-fit: cover;
+  }
 }
 #restaurantgeneral .carte_restaurant .imgresto_encadre {
   position: absolute;
@@ -493,14 +565,23 @@ h1 {
 }
 #restaurantgeneral .carte_restaurant .intituleart {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   padding-top: 30px;
   padding-bottom: 30px;
-  padding-right: 20px;
   padding-left: 20px;
+  padding-right: 20px;
   background-color: #fff;
   border-radius: 0px 0px 20px 20px;
+}
+@media all and (min-width: 768px) {
+  #restaurantgeneral .carte_restaurant .intituleart {
+    padding-right: 4%;
+    padding-left: 4%;
+    font-size: 0.7em;
+  }
+}
+#restaurantgeneral .carte_restaurant .intituleart .nom_resto {
+  width: 92%;
 }
 #restaurantgeneral .carte_restaurant .intituleart h3 {
   margin: 0;
@@ -508,8 +589,38 @@ h1 {
 #restaurantgeneral .carte_restaurant .intituleart p {
   margin: 0;
 }
-#restaurantgeneral .carte_restaurant .intituleart i {
-  font-size: 2em;
+
+.heart {
+  position: relative;
+  display: flex;
+  align-items: center;
+  font-size: 1.5em;
+}
+@media all and (min-width: 768px) {
+  .heart {
+    margin-right: 25px;
+  }
+}
+.heart .fas {
+  position: absolute;
+  left: 0;
+  opacity: 0;
+  color: #d20098;
+  font-size: 1em;
+}
+.heart .fas:hover {
+  transition: opacity 500ms ease-in-out;
+  opacity: 1;
+  cursor: pointer;
+}
+.heart .far {
+  position: absolute;
+  left: 0;
+  color: black;
+}
+.heart .far:hover {
+  color: #d20098;
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=style.css.map */
