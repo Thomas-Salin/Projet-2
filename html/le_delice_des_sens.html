@@ -6,10 +6,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="../css/style.css">
         <script src="https://kit.fontawesome.com/329276ad25.js" crossorigin="anonymous"></script>
-        <title>Menu : Le Délice des sens</title>
+        <title>Menu : Le délice des sens </title>
     </head>
 
-    <body>
+    <body id="body_carte">
 
         <header class="headerbox">
             
@@ -17,24 +17,24 @@
             <a href="../index.html"><i class="fas fa-arrow-left"></i></a>
             </div>
             <div class="headerbox_logo">
-            <img src="../logo/ohmyfood.png" class="headerbox_logo_img"  alt="logo_ohmyfood"/>
+            <img src="../logo/ohmyfood.png" class="headerbox_logo_img" alt="logo_ohmyfood"/>
             </div>
 
         </header>
         
-        <main>
+        <main id="main_carte">
 
             <section class="menusection">
 
-                <img src="../photos/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" class="menusection_image" alt="photo_plat_le_delice_des_sens">
-
+                <img src="../photos/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash1.jpg" class="menusection_image" alt="photo_plat_le_delice_des_sens">
+               
                 <div class="menusection_intituleresto">
 
-                    <div>
-                        <h2>Le Délice des sens</h2>
+                    <div class="menusection_intituleresto_titre">
+                        <h2>Le délice des sens</h2>
                     </div>
-                    <div>
-                    <i class="far fa-heart"></i>
+                    <div class="heart">
+                        <i class="far fa-heart"><i class="fas fa-heart"></i></i>
                     </div>
 
                 </div>
@@ -46,46 +46,63 @@
 
                 <fieldset class="fieldsetmenu">
 
-                    <legend class="fieldsetmenu_legend">Entrées</legend>    
+                    <legend class="fieldsetmenu_legend">Entrées</legend>  
+                    
+                    <div class="fieldsetmenu_flexbox choix1">
 
-                    <div class="fieldsetmenu_flexbox"> 
+                        <div class="flexbox_intitulechoix">
 
-                        <div>
-                            <label for="tartare"><strong>Tartare de thon</strong><br/>Assaisonné au yuzu</label>
+                            <div class="fieldsetmenu_box1">
+                                <label for="thon"><strong>Tartare de thon</strong><br/>Assaisonné au yuzu</label>
+                            </div>
+                            <div class="fieldsetmenu_box2">
+                                <p class="fieldsetmenu_flexbox_prix">25€</p>
+                            </div>
+
                         </div>
-                        <div>
-                            <p><strong>25€</strong></p>
+
+                        <div class="fieldsetmenu_flexbox_anim">
+                             <i class="fas fa-check-circle"><input type="radio" name="entree" value="thon" id="thon"/></i> 
                         </div>
-                        <div>
-                            <i class="fas fa-check-circle"><input type="radio" name="entree" value="tartare" id="tartare"/></i>
+
+                    </div>    
+
+                    
+
+                    <div class="fieldsetmenu_flexbox choix2">
+
+                        <div class="flexbox_intitulechoix">
+
+                            <div class="fieldsetmenu_box1">
+                                <label for="homard"><strong>Bouchée de homard croustillant</strong><br/>Et sa farandole de petits légumes</label>             
+                            </div>
+                            <div class="fieldsetmenu_box2">
+                                <p class="fieldsetmenu_flexbox_prix">35€</p>
+                            </div>
+
+                        </div>
+                        
+                        <div class="fieldsetmenu_flexbox_anim">
+                            <i class="fas fa-check-circle"><input type="radio" name="entree" value="homard" id="homard"/></i> 
                         </div>
 
                     </div>
 
-                    <div class="fieldsetmenu_flexbox">
+                    <div class="fieldsetmenu_flexbox choix3">
+                   
+                        <div class="flexbox_intitulechoix">
 
-                        <div>
-                            <label for="bouchee_de_homard"><strong>Bouchée de homard croustillant</strong><br/>Et sa farandole de petits légumes</label>             
-                        </div>
-                        <div>
-                            <p><strong>35€</strong></p>
-                        </div>
-                        <div>
-                            <i class="fas fa-check-circle"><input type="radio" name="entree" value="bouchee_de_homard" id="bouchee_de_homard"/></i> 
+                            <div class="fieldsetmenu_box1">
+                                <label for="cepes"><strong>Velouté de cèpes</strong><br/>Aux truffes</label>                                  
+                            </div>
+                            <div class="fieldsetmenu_box2">
+                                <p class="fieldsetmenu_flexbox_prix">20€</p>
+                            </div>
+                          
                         </div>
 
-                    </div>
-
-                    <div class="fieldsetmenu_flexbox">
-
-                        <div>
-                            <label for="veloute"><strong>Velouté de cèpes</strong><br/>Aux truffes</label>                                  
-                        </div>
-                        <div>
-                            <p><strong>20€</strong></p>
-                        </div>
-                        <div>
-                            <i class="fas fa-check-circle"><input type="radio" name="entree" value="veloute" id="veloute"/></i>
+                        <div class="fieldsetmenu_flexbox_anim">
+                            <i class="fas fa-check-circle"><input type="radio" name="entree" value="cepes" id="cepes"/></i>
                         </div>
  
                     </div>
@@ -96,43 +113,58 @@
 
                     <legend class="fieldsetmenu_legend">Plats</legend>
 
-                    <div class="fieldsetmenu_flexbox">
+                    <div class="fieldsetmenu_flexbox choix1">
+                        
+                        <div class="flexbox_intitulechoix">
 
-                        <div>
-                            <label for="poulet"><strong>Poulet rôti aux herbes de Provences</strong><br/>Et sa crème de truffe</label>                            
+                            <div class="fieldsetmenu_box1">
+                                <label for="poulet"><strong>Poulet rôti aux herbes de Provence</strong><br/>Et sa crème de truffe</label>                            
+                            </div>
+                            <div class="fieldsetmenu_box2">
+                                <p class="fieldsetmenu_flexbox_prix">40€</p>
+                            </div>
+
                         </div>
-                        <div>
-                            <p><strong>40€</strong></p>
-                        </div>
-                        <div>
+
+                        <div class="fieldsetmenu_flexbox_anim">
                             <i class="fas fa-check-circle"><input type="radio" name="plats" value="poulet" id="poulet"/></i> 
                         </div>
                       
                     </div>
                     
-                    <div class="fieldsetmenu_flexbox">
+                    <div class="fieldsetmenu_flexbox choix2">
 
-                        <div>
-                            <label for="langouste"><strong>Langouste rôtie</strong><br/>Et ses légumes de saison</label>
+                        <div class="flexbox_intitulechoix">
+
+                            <div class="fieldsetmenu_box1">
+                                <label for="langouste"><strong>Langouste rôtie</strong><br/>Et ses légumes de saison</label>
+                            </div>
+                            <div class="fieldsetmenu_box2">
+                                <p class="fieldsetmenu_flexbox_prix">35€</p>
+                            </div>
+
                         </div>
-                        <div>
-                            <p><strong>35€</strong></p>
-                        </div>
-                        <div>
+
+                        <div class="fieldsetmenu_flexbox_anim">
                             <i class="fas fa-check-circle"><input type="radio" name="plats" value="langouste" id="langouste"/></i> 
                         </div>
 
                     </div>
 
-                    <div class="fieldsetmenu_flexbox">
+                    <div class="fieldsetmenu_flexbox choix3">
 
-                        <div>
-                            <label for="cote"><strong>Côte de boeuf Angus </strong><br/>Et sa purée de panais</label>
+                        <div class="flexbox_intitulechoix">
+
+                            <div class="fieldsetmenu_box1">
+                                <label for="cote"><strong>Côte de boeuf Angus</strong><br/>Et sa purée de panais</label>
+                            </div>
+                            <div class="fieldsetmenu_box2">
+                                <p class="fieldsetmenu_flexbox_prix">44€</p>
+                            </div>
+
                         </div>
-                        <div>
-                            <p><strong>44€</strong></p>
-                        </div>
-                        <div>
+
+                        <div class="fieldsetmenu_flexbox_anim">
                             <i class="fas fa-check-circle"><input type="radio" name="plats" value="cote" id="cote"/></i> 
                         </div>
 
@@ -144,43 +176,58 @@
 
                     <legend class="fieldsetmenu_legend">Desserts</legend>
 
-                    <div class="fieldsetmenu_flexbox">
+                    <div class="fieldsetmenu_flexbox choix1">
 
-                        <div>
-                            <label for="farandole"><strong>Farandole de desserts</strong><br/>Du chef</label>               
+                        <div class="flexbox_intitulechoix">
+
+                            <div class="fieldsetmenu_box1">
+                                <label for="farandole"><strong>Farandole de desserts</strong><br/>Du chef</label>               
+                            </div>
+                            <div class="fieldsetmenu_box2">
+                                <p class="fieldsetmenu_flexbox_prix">18€</p>
+                            </div>
+
                         </div>
-                        <div>
-                            <p><strong>18€</strong></p>
-                        </div>
-                        <div>
+
+                        <div class="fieldsetmenu_flexbox_anim">
                             <i class="fas fa-check-circle"><input type="radio" name="dessert" value="farandole" id="farandole"/></i> 
                         </div>
 
                     </div>
 
-                    <div class="fieldsetmenu_flexbox">
+                    <div class="fieldsetmenu_flexbox choix2">
 
-                        <div>
-                            <label for="creme"><strong>Crème brulée</strong><br/>Revisitée</label>
+                        <div class="flexbox_intitulechoix">
+
+                            <div class="fieldsetmenu_box1">
+                                <label for="creme"><strong>Crème brulée</strong><br/>Revisitée</label>
+                            </div>
+                            <div class="fieldsetmenu_box2">
+                                <p class="fieldsetmenu_flexbox_prix">22€</p>
+                            </div>
+
                         </div>
-                        <div>
-                            <p><strong>22€</strong></p>
-                        </div>
-                        <div>
+
+                        <div class="fieldsetmenu_flexbox_anim">
                             <i class="fas fa-check-circle"><input type="radio" name="dessert" value="creme" id="creme"/></i> 
                         </div>
 
                     </div>
 
-                    <div class="fieldsetmenu_flexbox">
+                    <div class="fieldsetmenu_flexbox choix3">
 
-                        <div>
-                            <label for="tiramisu"><strong>Tiramisu</strong><br/>À la noisette</label>
+                        <div class="flexbox_intitulechoix">
+
+                            <div class="fieldsetmenu_box1">
+                                <label for="tiramisu"><strong>Tiramisu</strong><br/>À la noisette</label>
+                            </div>
+                            <div class="fieldsetmenu_box2">
+                                <p class="fieldsetmenu_flexbox_prix">23€</p>
+                            </div>
+
                         </div>
-                        <div>
-                            <p><strong>23€</strong></p>
-                        </div>
-                        <div>
+                            
+                        <div class="fieldsetmenu_flexbox_anim">
                             <i class="fas fa-check-circle"><input type="radio" name="dessert" value="tiramisu" id="tiramisu"/></i> 
                         </div>
 
@@ -188,9 +235,9 @@
 
                  </fieldset>
                     
-                 <div>
-                     <input type="submit" value="Commander"/>
-                 </div>
+                <div class="div_bouton">
+                    <input type="submit" value="Commander" class="bouton"/>
+                </div>
 
             </form>
 
@@ -198,7 +245,7 @@
 
         <footer>
 
-            <img src="../logo/ohmyfood@2x.svg" alt="logosvg_ohmyfood"/>
+            <img src="../logo/ohmyfood@2x1.png" alt="logosvg_ohmyfood"/>
             <ul>
                 <li><i class="fas fa-utensils"></i>Proposer un restaurant</li>
                 <li><i class="fas fa-hands-helping"></i>Devenir partenaire</li>

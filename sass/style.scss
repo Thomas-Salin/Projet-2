@@ -81,15 +81,14 @@ a{
 
 h2{
     margin: 0;
-    @media all and (min-width: 768px){
-        text-align: center;
-        margin: auto;
-    }
 }
 
 header{    
     text-align: center;
-    margin: 4%;    
+    margin: 4%;
+    @media all and (min-width: 768px){
+        margin: 2%;
+    }    
 
     .header_accueil{
         width: 92%;
@@ -380,7 +379,7 @@ form{
 
 
     
-    .div{
+    .div_bouton{
         text-align: center;
 
         .bouton{
@@ -443,6 +442,7 @@ footer{
 
     li{
         list-style: none;
+        cursor: pointer;
         margin-bottom: 10px;
         @media all and (min-width: 768px){
             margin: 0;
@@ -503,6 +503,13 @@ h1{
         @include dimension_desktop;
     }
 
+    h2{
+        @media all and (min-width: 768px){
+        text-align: center;
+        margin: auto;
+    }
+    }
+
     ul{
         list-style: none;
         padding-top: 25px;
@@ -521,6 +528,7 @@ h1{
             border-radius: 25px;
             margin-bottom: 25px;
             font-weight: bold;
+            cursor: pointer;
             background-color: $colorbackgroundmain;
             @include box-shadow;
             @media all and(min-width: 768px){
@@ -548,14 +556,6 @@ h1{
                 margin-right: 15px;
             }
         }
-            
-        .li_color{
-                background-color: $colorbackgroundmain;
-        }
-
-        .li_othercolor{
-            
-        }
     }
 }
 
@@ -570,6 +570,12 @@ h1{
     background-color: $colorbackgroundmain;
     @media all and (min-width: 768px){
         @include dimension_desktop;
+    }
+    h2{
+        @media all and (min-width: 768px){
+        text-align: center;
+        margin: auto;
+    }
     }
 
     #boxarticle{
