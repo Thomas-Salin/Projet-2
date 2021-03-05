@@ -671,6 +671,11 @@ h1 {
     opacity: 0;
   }
 }
+@media all and (max-width: 768px) {
+  #loader {
+    margin-top: 25%;
+  }
+}
 
 .loader {
   display: flex;
