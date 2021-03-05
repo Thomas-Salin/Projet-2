@@ -48,14 +48,29 @@ $paddingmain: 2%;
 }
 
 
-
-
-
 body{
     margin: 0;
-    border: solid 1px black;
-      
+    position: relative;
+    
 }
+
+#page_entiere{
+    position: absolute;
+    animation-name: loader_transition1;
+    animation-duration: 0ms;
+    animation-delay: 3000ms;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: backwards;
+    @keyframes loader_transition1{
+        from{
+            opacity: 0;
+        }
+        to{
+           opacity: 1;
+        }
+    }
+}
+
 
 @media all and (min-width: 768px){
     #body_carte{
@@ -252,7 +267,7 @@ form{
             border-radius: 20px;
             margin-bottom: 30px;
             @include box-shadow;
-            transform-origin: 50%, 0%;
+            transform-origin: 50% 0%;
             transform: translateY(0);
             transition: transform; 
             
@@ -687,6 +702,94 @@ h1{
         }
     }
 }
+
+
+#loader{
+    position: absolute;
+    margin-top: 15%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    animation-name: loader_transition2;
+    animation-duration: 0ms;
+    animation-delay: 3000ms;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
+    @keyframes loader_transition2{
+        0%{
+            opacity: 1;
+        }
+        100%{
+            opacity: 0;
+        }
+    }
+}
+
+.loader{
+    display: flex;
+    border-radius: 50%; 
+    justify-content: center;
+}
+
+.un{
+    width: 240px;
+    height: 240px;
+    border-top: solid 15px $colorprimaire;
+    animation-name: loader_spinner;
+    animation-duration: 1000ms;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    
+    @keyframes loader_spinner{
+        from{
+            transform: rotate(0deg);
+        }
+        to{
+            transform: rotate(360deg);
+        }
+    } 
+}
+
+.deux{
+    width: 200px;
+    height: 200px;
+    border-top: solid 15px $colorsecondaire;
+    align-self: center;
+    animation-name: loader_spinner;
+    animation-duration: 1000ms;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    
+    @keyframes loader_spinner{
+        from{
+            transform: rotate(0deg);
+        }
+        to{
+            transform: rotate(360deg);
+        }
+    } 
+}
+
+.trois{
+    width: 160px;
+    height: 160px;
+    border-top: solid 15px $colortertiaire;
+    align-self: center;
+    animation-name: loader_spinner;
+    animation-duration: 1000ms;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    
+    @keyframes loader_spinner{
+        from{
+            transform: rotate(0deg);
+        }
+        to{
+            transform: rotate(360deg);
+        }
+    } 
+}
+
 
  
 
