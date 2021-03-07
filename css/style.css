@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: "Shrikhand";
   src: url(../police/Shrikhand-Regular.ttf);
@@ -11,6 +12,118 @@ body {
   position: relative;
 }
 
+a {
+  text-decoration: none;
+  color: black;
+}
+@media all and (min-width: 768px) {
+  a {
+    width: 22%;
+  }
+}
+
+h2 {
+  margin: 0;
+}
+
+@media all and (min-width: 768px) {
+  #body_carte {
+    background-color: #e4d5f6;
+  }
+}
+@media all and (min-width: 768px) {
+  #main_carte {
+    width: 60%;
+    margin-left: 20%;
+    margin-right: 20%;
+  }
+}
+/** loader spinner **/
+#loader {
+  position: absolute;
+  margin-top: 15%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  animation-name: loader_transition2;
+  animation-duration: 0ms;
+  animation-delay: 3000ms;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards;
+}
+@keyframes loader_transition2 {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@media all and (max-width: 768px) {
+  #loader {
+    margin-top: 25%;
+  }
+}
+#loader .loader {
+  display: flex;
+  border-radius: 50%;
+  justify-content: center;
+}
+#loader .un {
+  width: 200px;
+  height: 200px;
+  border-top: solid 15px #9356DC;
+  animation-name: loader_spinner;
+  animation-duration: 1000ms;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+@keyframes loader_spinner {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+#loader .deux {
+  width: 160px;
+  height: 160px;
+  border-top: solid 15px #ff79da;
+  align-self: center;
+  animation-name: loader_spinner;
+  animation-duration: 1000ms;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+@keyframes loader_spinner {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+#loader .trois {
+  width: 120px;
+  height: 120px;
+  border-top: solid 15px #99E2D0;
+  align-self: center;
+  animation-name: loader_spinner;
+  animation-duration: 1000ms;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+@keyframes loader_spinner {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/** div regroupant toute la page accueil **/
 #page_entiere {
   position: absolute;
   animation-name: loader_transition1;
@@ -28,32 +141,7 @@ body {
   }
 }
 
-@media all and (min-width: 768px) {
-  #body_carte {
-    background-color: #e4d5f6;
-  }
-}
-@media all and (min-width: 768px) {
-  #main_carte {
-    width: 60%;
-    margin-left: 20%;
-    margin-right: 20%;
-  }
-}
-a {
-  text-decoration: none;
-  color: black;
-}
-@media all and (min-width: 768px) {
-  a {
-    width: 22%;
-  }
-}
-
-h2 {
-  margin: 0;
-}
-
+/** Header de l'accueil **/
 header {
   text-align: center;
   margin: 4%;
@@ -80,6 +168,7 @@ header .header_accueil_logo_img {
   }
 }
 
+/** Header des cartes**/
 .headerbox {
   display: flex;
   text-align: start;
@@ -107,6 +196,7 @@ header .header_accueil_logo_img {
   }
 }
 
+/** section correspondant à l'image et au titre des cartes avec le coeur **/
 .menusection {
   position: relative;
 }
@@ -142,6 +232,7 @@ header .header_accueil_logo_img {
   width: 92%;
 }
 
+/** formulaire regroupant tout le menu des cartes **/
 form {
   background-color: #f6f6f6;
   font-family: "Roboto";
@@ -259,14 +350,14 @@ form .fieldsetmenu_flexbox_anim input {
   display: none;
 }
 form .choix1 {
-  animation-name: apparition_progressive1;
+  animation-name: apparition_progressive;
   animation-duration: 750ms;
   animation-timing-function: ease-in-out;
   animation-delay: 50ms;
   animation-fill-mode: backwards;
   transform-origin: 50% 0%;
 }
-@keyframes apparition_progressive1 {
+@keyframes apparition_progressive {
   0% {
     transform: scaleY(0);
     opacity: 0;
@@ -277,14 +368,14 @@ form .choix1 {
   }
 }
 form .choix2 {
-  animation-name: apparition_progressive1;
+  animation-name: apparition_progressive;
   animation-duration: 750ms;
   animation-timing-function: ease-in-out;
   animation-delay: 100ms;
   animation-fill-mode: backwards;
   transform-origin: 50% 0%;
 }
-@keyframes apparition_progressive1 {
+@keyframes apparition_progressive {
   0% {
     transform: scaleY(0);
     opacity: 0;
@@ -295,14 +386,14 @@ form .choix2 {
   }
 }
 form .choix3 {
-  animation-name: apparition_progressive1;
+  animation-name: apparition_progressive;
   animation-duration: 750ms;
   animation-timing-function: ease-in-out;
   animation-delay: 200ms;
   animation-fill-mode: backwards;
   transform-origin: 50% 0%;
 }
-@keyframes apparition_progressive1 {
+@keyframes apparition_progressive {
   0% {
     transform: scaleY(0);
     opacity: 0;
@@ -313,14 +404,14 @@ form .choix3 {
   }
 }
 form .choix4 {
-  animation-name: apparition_progressive1;
+  animation-name: apparition_progressive;
   animation-duration: 750ms;
   animation-timing-function: ease-in-out;
   animation-delay: 300ms;
   animation-fill-mode: backwards;
   transform-origin: 50% 0%;
 }
-@keyframes apparition_progressive1 {
+@keyframes apparition_progressive {
   0% {
     transform: scaleY(0);
     opacity: 0;
@@ -351,6 +442,7 @@ form .div_bouton .bouton:hover {
   box-shadow: 0px 0px 10px #4d4d4d;
 }
 
+/** footer identique au carte et à l'accueil **/
 footer {
   background-color: #000000;
   font-family: "Roboto";
@@ -401,11 +493,6 @@ footer li {
 }
 
 /*Debut css "index.html"*/
-input {
-  border: none;
-  background-color: #f6f6f6;
-}
-
 h1 {
   margin-top: 16px;
 }
@@ -414,6 +501,7 @@ h1 {
   text-align: center;
 }
 
+/** Champs de recherche de l'accueil **/
 .form_accueil {
   padding: 0;
   width: 100%;
@@ -429,6 +517,7 @@ h1 {
 .form_accueil #champ_de_recherche input {
   background-color: #d0d0d0;
   font-size: 1em;
+  border: none;
 }
 .form_accueil #champ_de_recherche input:focus {
   outline: none;
@@ -446,6 +535,7 @@ h1 {
   background-color: #f6f6f6;
 }
 
+/** Encadré de fonctionnement du site **/
 #presentation {
   width: 92%;
   padding-top: 50px;
@@ -517,10 +607,7 @@ h1 {
   margin-right: 15px;
 }
 
-.othercolor {
-  background-color: #9356DC;
-}
-
+/** Encadré "Restaurants du site" **/
 #restaurantgeneral {
   width: 92%;
   padding-top: 50px;
@@ -618,6 +705,7 @@ h1 {
   margin: 0;
 }
 
+/** animation du coeur **/
 .heart {
   position: relative;
   display: flex;
@@ -649,94 +737,6 @@ h1 {
 .heart .far:hover {
   color: #d20098;
   cursor: pointer;
-}
-
-#loader {
-  position: absolute;
-  margin-top: 15%;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  animation-name: loader_transition2;
-  animation-duration: 0ms;
-  animation-delay: 3000ms;
-  animation-timing-function: ease-in;
-  animation-fill-mode: forwards;
-}
-@keyframes loader_transition2 {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-@media all and (max-width: 768px) {
-  #loader {
-    margin-top: 25%;
-  }
-}
-
-.loader {
-  display: flex;
-  border-radius: 50%;
-  justify-content: center;
-}
-
-.un {
-  width: 240px;
-  height: 240px;
-  border-top: solid 15px #9356DC;
-  animation-name: loader_spinner;
-  animation-duration: 1000ms;
-  animation-timing-function: ease-in-out;
-  animation-iteration-count: infinite;
-}
-@keyframes loader_spinner {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-.deux {
-  width: 200px;
-  height: 200px;
-  border-top: solid 15px #ff79da;
-  align-self: center;
-  animation-name: loader_spinner;
-  animation-duration: 1000ms;
-  animation-timing-function: ease-in-out;
-  animation-iteration-count: infinite;
-}
-@keyframes loader_spinner {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-.trois {
-  width: 160px;
-  height: 160px;
-  border-top: solid 15px #99E2D0;
-  align-self: center;
-  animation-name: loader_spinner;
-  animation-duration: 1000ms;
-  animation-timing-function: ease-in-out;
-  animation-iteration-count: infinite;
-}
-@keyframes loader_spinner {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
 
 /*# sourceMappingURL=style.css.map */

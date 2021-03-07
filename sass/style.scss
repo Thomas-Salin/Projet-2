@@ -19,8 +19,6 @@ $colorbackgroundmain: #f6f6f6;
 $colorbackgroundchamps: darken($colorbackgroundmain, 15%);
 $colorbackgroundchoix:#fff;
 $colorbackgroundfooter: #000000; 
-$paddingmain: 2%;
-
 
 @mixin dimension_smallscreen{
         width: 92%;
@@ -48,11 +46,126 @@ $paddingmain: 2%;
 }
 
 
+@mixin loader_spinner{
+    animation-name: loader_spinner;
+    animation-duration: 1000ms;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;   
+    @keyframes loader_spinner{
+        from{
+            transform: rotate(0deg);
+        }
+        to{
+            transform: rotate(360deg);
+        }
+    } 
+}
+
+@mixin apparition_progressive{
+    @keyframes apparition_progressive{
+        0%{
+            transform: scaleY(0);
+            opacity: 0;                   
+        }
+        100%{
+           transform: scaleY(1);
+           opacity: 1;
+        }   
+    }
+}
+
+
 body{
     margin: 0;
     position: relative;
     
 }
+
+a{
+    text-decoration: none;
+    color: black;
+    @media all and (min-width: 768px){
+        width: 22%;
+    }
+}
+
+h2{
+    margin: 0;
+}
+
+@media all and (min-width: 768px){
+    #body_carte{
+    background-color: lighten($colorprimaire, 30%);
+    }
+}
+
+@media all and (min-width: 768px){
+    #main_carte{
+        width: 60%;
+        margin-left: 20%;
+        margin-right: 20%;
+    }
+}
+
+/** loader spinner **/
+
+#loader{
+    position: absolute;
+    margin-top: 15%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    animation-name: loader_transition2;
+    animation-duration: 0ms;
+    animation-delay: 3000ms;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
+    @keyframes loader_transition2{
+        0%{
+            opacity: 1;
+        }
+        100%{
+            opacity: 0;
+        }
+    }    
+    @media all and (max-width: 768px){
+        margin-top: 25%;
+    }
+
+    .loader{
+        display: flex;
+        border-radius: 50%; 
+        justify-content: center;
+    }
+
+
+    .un{
+        width: 200px;
+        height: 200px;
+        border-top: solid 15px $colorprimaire;
+        @include loader_spinner;
+    }
+        
+
+    .deux{
+        width: 160px;
+        height: 160px;
+        border-top: solid 15px $colorsecondaire;
+        align-self: center;
+        @include loader_spinner;
+    }
+
+    .trois{
+        width: 120px;
+        height: 120px;
+        border-top: solid 15px $colortertiaire;
+        align-self: center;
+        @include loader_spinner;
+    }
+}
+
+
+/** div regroupant toute la page accueil **/
 
 #page_entiere{
     position: absolute;
@@ -72,34 +185,10 @@ body{
 }
 
 
-@media all and (min-width: 768px){
-    #body_carte{
-    background-color: lighten($colorprimaire, 30%);
-    }
-}
+/** Header de l'accueil **/
 
-@media all and (min-width: 768px){
-    #main_carte{
-        width: 60%;
-        margin-left: 20%;
-        margin-right: 20%;
-    }
-}
-
-a{
-    text-decoration: none;
-    color: black;
-    @media all and (min-width: 768px){
-        width: 22%;
-    }
-}
-
-h2{
-    margin: 0;
-}
-
-header{    
-    text-align: center;
+header{
+    text-align: center;   
     margin: 4%;
     @media all and (min-width: 768px){
         margin: 2%;
@@ -120,37 +209,41 @@ header{
                 }
             }
         }
-
     }
-}    
-    
+}   
+
+/** Header des cartes**/
+
 .headerbox{
-        display: flex;
-        text-align: start;
-    
-        &_icone{
-            align-self: center;
-            font-size: 2em;
+    display: flex;
+    text-align: start;
+
+    &_icone{
+        align-self: center;
+        font-size: 2em;
+        @media all and (max-width: 768px){
+            font-size: 1em;
+        }
+    }
+
+    &_logo{
+        width: 100%;
+        text-align: center;
+
+        &_img{
+            object-fit: contain;
+            width: 40%;
             @media all and (max-width: 768px){
-                font-size: 1em;
+                width: 50%;
             }
         }
-
-        &_logo{
-            width: 100%;
-            text-align: center;
-
-            &_img{
-                object-fit: contain;
-                width: 40%;
-                @media all and (max-width: 768px){
-                    width: 50%;
-                }
-            }
-        }
+    }
 }
+    
 
 
+
+/** section correspondant à l'image et au titre des cartes avec le coeur **/
 
 .menusection{
     position: relative;
@@ -182,10 +275,11 @@ header{
         
         &_titre{
             width: 92%;
-        }
-        
+        }    
     }
 }
+
+/** formulaire regroupant tout le menu des cartes **/
 
 form{
     background-color: $colorbackgroundmain;
@@ -306,93 +400,49 @@ form{
 
             }
         }
-
     }
 
     .choix1{
-        animation-name: apparition_progressive1;
+        animation-name: apparition_progressive;
         animation-duration: 750ms;
         animation-timing-function: ease-in-out;
         animation-delay: 50ms;
         animation-fill-mode: backwards;
         transform-origin: 50% 0%;
-        @keyframes apparition_progressive1{
-            0%{
-                transform: scaleY(0);
-                opacity: 0;                   
-            }
-            100%{
-               transform: scaleY(1);
-               opacity: 1;
-       }
+        @include apparition_progressive;       
     }  
         
 
-    }
-
     .choix2{
-        animation-name: apparition_progressive1;
+        animation-name: apparition_progressive;
         animation-duration: 750ms;
         animation-timing-function: ease-in-out;
         animation-delay: 100ms;
         animation-fill-mode: backwards;
         transform-origin: 50% 0%;
-        @keyframes apparition_progressive1{
-            0%{
-                transform: scaleY(0);
-                opacity: 0;
-                
-            }
-           100%{
-               transform: scaleY(1);
-               opacity: 1;
-               
-
-           }
-        }  
+        @include apparition_progressive;
+        
     }
 
     .choix3{
-        animation-name: apparition_progressive1;
+        animation-name: apparition_progressive;
         animation-duration: 750ms;
         animation-timing-function: ease-in-out;
         animation-delay: 200ms;
         animation-fill-mode: backwards;
         transform-origin: 50% 0%;
-        @keyframes apparition_progressive1{
-            0%{
-                transform: scaleY(0);
-                opacity: 0;
-                
-            }
-           100%{
-               transform: scaleY(1);
-               opacity: 1;
-               
-
-           }
-        }  
+        @include apparition_progressive;
     }
+
     .choix4{
-        animation-name: apparition_progressive1;
+        animation-name: apparition_progressive;
         animation-duration: 750ms;
         animation-timing-function: ease-in-out;
         animation-delay: 300ms;
         animation-fill-mode: backwards;
         transform-origin: 50% 0%;
-        @keyframes apparition_progressive1{
-            0%{
-                transform: scaleY(0);
-                opacity: 0;
-            }
-           100%{
-               transform: scaleY(1);
-               opacity: 1;
-           }
-        }  
+        @include apparition_progressive; 
     }
-
-
     
     .div_bouton{
         text-align: center;
@@ -416,6 +466,8 @@ form{
         }   
     }
 }
+
+/** footer identique au carte et à l'accueil **/
 
 footer{
     background-color: #000000;
@@ -467,10 +519,7 @@ footer{
 
 /*Debut css "index.html"*/
 
-input{
-    border: none;
-    background-color: $colorbackgroundmain;
-}
+
 h1{
     margin-top: 16px;
 }
@@ -478,6 +527,8 @@ h1{
 #recherche{
     text-align: center;
 }
+
+/** Champs de recherche de l'accueil **/
 
 .form_accueil{
     padding: 0;
@@ -494,6 +545,7 @@ h1{
         input{
             background-color: $colorbackgroundchamps;
             font-size: 1em;
+            border: none;
             &:focus{
                 outline: none;
             }
@@ -510,6 +562,8 @@ h1{
         background-color: $colorbackgroundmain;
     }
 }
+
+/** Encadré de fonctionnement du site **/
 
 #presentation{
     @include dimension_smallscreen;
@@ -574,10 +628,7 @@ h1{
     }
 }
 
-
-.othercolor{
-    background-color: $colorprimaire;
-}
+/** Encadré "Restaurants du site" **/
 
 #restaurantgeneral{
     @include dimension_smallscreen;
@@ -668,6 +719,8 @@ h1{
     }
 }
 
+/** animation du coeur **/
+
 .heart{
     position: relative;
     display: flex;
@@ -703,95 +756,6 @@ h1{
     }
 }
 
-
-#loader{
-    position: absolute;
-    margin-top: 15%;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    animation-name: loader_transition2;
-    animation-duration: 0ms;
-    animation-delay: 3000ms;
-    animation-timing-function: ease-in;
-    animation-fill-mode: forwards;
-    @keyframes loader_transition2{
-        0%{
-            opacity: 1;
-        }
-        100%{
-            opacity: 0;
-        }
-    }
-    @media all and (max-width: 768px){
-        margin-top: 25%;
-    }
-}
-
-.loader{
-    display: flex;
-    border-radius: 50%; 
-    justify-content: center;
-}
-
-.un{
-    width: 240px;
-    height: 240px;
-    border-top: solid 15px $colorprimaire;
-    animation-name: loader_spinner;
-    animation-duration: 1000ms;
-    animation-timing-function: ease-in-out;
-    animation-iteration-count: infinite;
-    
-    @keyframes loader_spinner{
-        from{
-            transform: rotate(0deg);
-        }
-        to{
-            transform: rotate(360deg);
-        }
-    } 
-}
-
-.deux{
-    width: 200px;
-    height: 200px;
-    border-top: solid 15px $colorsecondaire;
-    align-self: center;
-    animation-name: loader_spinner;
-    animation-duration: 1000ms;
-    animation-timing-function: ease-in-out;
-    animation-iteration-count: infinite;
-    
-    @keyframes loader_spinner{
-        from{
-            transform: rotate(0deg);
-        }
-        to{
-            transform: rotate(360deg);
-        }
-    } 
-}
-
-.trois{
-    width: 160px;
-    height: 160px;
-    border-top: solid 15px $colortertiaire;
-    align-self: center;
-    animation-name: loader_spinner;
-    animation-duration: 1000ms;
-    animation-timing-function: ease-in-out;
-    animation-iteration-count: infinite;
-    
-    @keyframes loader_spinner{
-        from{
-            transform: rotate(0deg);
-        }
-        to{
-            transform: rotate(360deg);
-        }
-    } 
-}
 
 
  
