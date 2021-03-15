@@ -427,7 +427,7 @@ form .div_bouton {
 form .div_bouton .bouton {
   padding: 15px 30px;
   color: #fff;
-  background-color: #d20098;
+  background-color: #d76cda;
   cursor: pointer;
   border-radius: 40px;
   border: none;
@@ -721,7 +721,7 @@ h1 {
   position: absolute;
   left: 0;
   opacity: 0;
-  color: #d20098;
+  color: #d76cda;
   font-size: 1em;
 }
 .heart .fas:hover {
@@ -735,7 +735,7 @@ h1 {
   color: black;
 }
 .heart .far:hover {
-  color: #d20098;
+  color: #d76cda;
   cursor: pointer;
 }
 

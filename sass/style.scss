@@ -10,15 +10,15 @@
 
 $fonttitre: "Shrikhand";
 $fonttexte: "Roboto";
-$colorprimaire:#9356DC;
+$colorprimaire:#9356DC ;
 $colorsecondaire:#ff79da;
 $colortertiaire:#99E2D0;
 $colorimgcadre: darken($colortertiaire,40%);
-$colorbouton: darken($colorsecondaire, 32.5%);
+$colorbouton: #d76cda;
 $colorbackgroundmain: #f6f6f6;
 $colorbackgroundchamps: darken($colorbackgroundmain, 15%);
 $colorbackgroundchoix:#fff;
-$colorbackgroundfooter: #000000; 
+$colorbackgroundfooter: #353535; 
 
 @mixin dimension_smallscreen{
         width: 92%;
